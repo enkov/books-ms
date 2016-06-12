@@ -13,9 +13,9 @@ node("cd") {
     git url: "https://github.com/vfarcic/${serviceName}.git"
     flow.provision(swarmPlaybook)
     flow.provision(proxyPlaybook)
-    flow.buildTests(serviceName, registryIpPort)
-    flow.runTests(serviceName, "tests", "")
-    flow.buildService(serviceName, registryIpPort)
+    //flow.buildTests(serviceName, registryIpPort)
+    //flow.runTests(serviceName, "tests", "")
+    //flow.buildService(serviceName, registryIpPort)
 
     def currentColor = flow.getCurrentColor(serviceName, prodIp)
     def nextColor = flow.getNextColor(currentColor)
